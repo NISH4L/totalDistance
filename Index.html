@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Credit goes to Google API Documentations and few Youtube instructions. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Driving Distance</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="mainContainer">
+        <div class="container-fluid">
+            <h1>THIS SITE CALCULATES TOTAL DRIVING DISTANCE AND TIME BETWEEN TWO PLACES <br />
+            USING GOOGLE MAPS API</h1>
+            <br />
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="from" class="col-xs-2 control-label">FROM:</label>
+                    <div class="col-xs-10">
+                        <input type="text" id="from" placeholder="Origin" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="to" class="col-xs-2 control-label">TO:</label>
+                    <div class="col-xs-10">
+                        <input type="text" id="to" placeholder="Destination" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="googleMap">
+        </div>
+        <center>
+          <br />
+        <div class="col-xs-offset-2 col-xs-10">
+            <button class="btn btn-info btn-lg" onclick="totalDistance();">CALCULATE</button>
+        </div>
+        </center>
+        <br />
+        <br />
+        <div id="resultdiv">
+        </div>
+    </div>
+
+    <!-- Loading Google Maps API with my key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN4p5aWehIw7lbjdKahTh1qbluEI9jEYc&libraries=places"></script>
+
+    <!-- Loading all other requred scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/jquery-3.1.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
